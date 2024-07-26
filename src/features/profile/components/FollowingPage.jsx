@@ -19,6 +19,13 @@ const FollowingPage = () => {
   if (isGettingUser || isGettingCurrentUser || isGettingFollowers)
     return <SpinnerComponent />;
 
+  if (following.length === 0)
+    return (
+      <p className="grid h-screen place-items-center font-bold text-gray-500">
+        No followers yet
+      </p>
+    );
+
   return (
     <MainContainerSection
       iconSection={IoPeopleCircle}
