@@ -24,8 +24,6 @@ export const useUpdateVerificationEmail = () => {
         description: `There was an error verifying the email, ${error.message}`,
         variant: "destructive",
       });
-
-      console.error("Email verification error:", error);
     },
   });
 

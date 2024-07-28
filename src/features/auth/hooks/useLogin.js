@@ -22,7 +22,6 @@ export const useLogin = () => {
       navigate("/", { replace: true });
     },
     onError: (error) => {
-      console.log(error);
       toast({
         description: `Login failed: ${error.message}`,
         variant: "destructive",

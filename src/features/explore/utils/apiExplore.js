@@ -57,7 +57,6 @@ export const getPostsCreatedWeekly = async () => {
 
     return posts.documents;
   } catch (error) {
-    console.error("Error fetching weekly posts:", error);
     throw error.message;
   }
 };

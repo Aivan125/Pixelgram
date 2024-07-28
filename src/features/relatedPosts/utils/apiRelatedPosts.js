@@ -13,7 +13,6 @@ export const getUserById = async (userId) => {
     if (!userById) throw new Error("Failed to get user by id");
     return userById;
   } catch (error) {
-    console.error("Error fetching user posts:", error);
-    throw error;
+    throw Error;
   }
 };

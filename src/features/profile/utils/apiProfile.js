@@ -60,7 +60,6 @@ export const updateProfileInfo = async ({
 
     return updatedUser;
   } catch (error) {
-    console.log(error);
     throw Error;
   }
 };
@@ -89,7 +88,6 @@ export const getListOfUsers = async (followers) => {
 
     return listOfUsers.documents;
   } catch (error) {
-    console.log(error.message);
     throw Error;
   }
 };

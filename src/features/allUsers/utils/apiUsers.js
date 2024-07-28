@@ -47,7 +47,6 @@ export const updateFollowers = async ({
       followerUser,
     };
   } catch (error) {
-    console.error(error.message);
     throw new Error(error.message);
   }
 };

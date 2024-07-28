@@ -12,8 +12,6 @@ const SavedPosts = () => {
 
   if (isGettingUser) return <SpinnerComponent />;
 
-  console.log(user.saves);
-
   if (user.saves.length === 0)
     return (
       <p className="grid h-screen place-items-center text-gray-400">

@@ -19,8 +19,6 @@ export const useCreateUser = () => {
         description: `There was an error logging in: ${error.message}`,
         variant: "destructive",
       });
-
-      console.log(error);
     },
   });
 

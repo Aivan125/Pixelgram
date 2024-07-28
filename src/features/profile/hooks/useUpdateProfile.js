@@ -23,7 +23,6 @@ export const useUpdateProfile = () => {
       navigate("/");
     },
     onError: (error) => {
-      console.log(error);
       toast({
         description: `The Profile could not be updated. Please try again! ${error.message}`,
         variant: "destructive",

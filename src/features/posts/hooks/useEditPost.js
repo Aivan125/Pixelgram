@@ -22,7 +22,6 @@ export const useEditPost = () => {
       });
     },
     onError: (error) => {
-      console.log(error.message);
       toast({
         description: `The post could not be updated. Please try again! ${error.message}`,
         variant: "destructive",

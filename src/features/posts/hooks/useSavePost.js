@@ -20,7 +20,6 @@ export const useSavePost = () => {
         queryKey: [QUERY_KEYS_AUTH.GET_CURRENT_USER],
       });
     },
-    onError: (err) => console.log(err.message),
   });
   return {
     savePost,

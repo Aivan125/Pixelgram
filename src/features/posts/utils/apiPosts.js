@@ -63,7 +63,6 @@ export const createPostDB = async (post) => {
 
     return newPost;
   } catch (error) {
-    console.log(error.message);
     throw Error;
   }
 };
@@ -239,7 +238,6 @@ export const editPost = async (post) => {
 
     return updatedPost;
   } catch (error) {
-    console.log(error.message);
     throw new Error("Error editing post:", error.message);
   }
 };
@@ -255,7 +253,7 @@ export async function uploadFile(file) {
 
     return uploadedFile;
   } catch (error) {
-    console.log(error.message);
+    throw Error;
   }
 }
 
@@ -277,7 +275,6 @@ export const deletePostDB = async ({ postId, savedPostId }) => {
 
     return { status: "OK" };
   } catch (error) {
-    console.error(error.message);
     throw Error;
   }
 };

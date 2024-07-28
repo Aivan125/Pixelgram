@@ -3,13 +3,16 @@ import { Link, useParams } from "react-router-dom";
 import PostAndSavesGrid from "../components/PostAndSavesGrid";
 import { useGetUserById } from "@/features/relatedPosts/hooks/useGetUserById";
 import SpinnerComponent from "@/components/ui/SpinnerComponent";
+import { useGetCurrentUser } from "@/features/auth/hooks/useGetCurrentUser";
 
 const ProfilePage = () => {
   const { userId } = useParams();
   const { userById, isGettingUser } = useGetUserById(userId);
   const { friendship: { followers, following } = {} } = userById || {};
+  const { user: currentUser, isGettingUser: isGettingCurrentUser } =
+    useGetCurrentUser();
 
-  if (isGettingUser) return <SpinnerComponent />;
+  if (isGettingUser || isGettingCurrentUser) return <SpinnerComponent />;
 
   return (
     <article className="h-screen overflow-y-scroll px-10 pb-20 pt-24">
@@ -28,7 +31,7 @@ const ProfilePage = () => {
         </div>
         <div className="flex flex-1 flex-col items-center justify-center gap-4">
           <div className="flex flex-col items-center justify-center gap-4">
-            {userId === userById.$id && (
+            {currentUser.$id === userById.$id && (
               <Link to="/editProfile">
                 <Button>Edit Profile</Button>
               </Link>

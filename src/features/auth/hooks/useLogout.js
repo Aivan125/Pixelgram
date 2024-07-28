@@ -19,9 +19,7 @@ export const useLogout = () => {
       queryClient.removeQueries();
       navigate("/sign-in", { replace: true });
     },
-    onError: (error) => {
-      console.log(error);
-    },
+    onError: (error) => {},
   });
   return {
     logoutSession,

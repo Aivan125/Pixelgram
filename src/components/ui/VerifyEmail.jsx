@@ -20,9 +20,6 @@ const VerifyEmail = () => {
     const userId = searchParams.get("userId");
     const secret = searchParams.get("secret");
 
-    console.log(userId);
-    console.log(secret);
-
     if (userId && secret) {
       updateVerificationEmailUser({ userId, secret });
     } else {
