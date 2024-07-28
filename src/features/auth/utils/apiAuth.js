@@ -75,7 +75,7 @@ export const getCurrentUser = async () => {
   try {
     //1.- get the session to check if there is an active session
     const currentSession = await account.getSession("current");
-    console.log(currentSession);
+
     if (!currentSession) return null;
 
     //2.- if there is a session, get the account.

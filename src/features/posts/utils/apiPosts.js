@@ -259,16 +259,25 @@ export async function uploadFile(file) {
   }
 }
 
-export const deletePostDB = async (postId) => {
+export const deletePostDB = async ({ postId, savedPostId }) => {
   try {
-    const response = await databases.deleteDocument(
+    const deletedPost = await databases.deleteDocument(
       appwriteConfig.databaseId,
       appwriteConfig.postsCollectionId,
       postId,
     );
 
-    return { response };
+    if (deletedPost) {
+      await databases.deleteDocument(
+        appwriteConfig.databaseId,
+        appwriteConfig.savesCollectionId,
+        savedPostId,
+      );
+    }
+
+    return { status: "OK" };
   } catch (error) {
+    console.error(error.message);
     throw Error;
   }
 };

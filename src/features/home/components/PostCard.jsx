@@ -13,8 +13,11 @@ const PostCard = memo(({ post, index }) => {
     location,
     $createdAt,
     $id: postId,
+    saves: { $id: savedPostId },
   } = post;
 
+  console.log(savedPostId);
+  console.log(post);
   // Dropdwon Menu State
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -55,6 +58,7 @@ const PostCard = memo(({ post, index }) => {
           isDialogOpen={isDialogOpen}
           onOpenDialog={setIsDialogOpen}
           postId={postId}
+          savedPostId={savedPostId}
         />
       </div>
       <PostCardActions post={post} />

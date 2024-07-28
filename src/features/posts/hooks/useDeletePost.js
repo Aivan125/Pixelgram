@@ -11,7 +11,8 @@ export const useDeletePost = () => {
   const navigate = useNavigate();
 
   const { mutate: deletePost, isPending: isDeleting } = useMutation({
-    mutationFn: (postId) => deletePostDB(postId),
+    mutationFn: ({ postId, savedPostId }) =>
+      deletePostDB({ postId, savedPostId }),
     onSuccess: () => {
       toast({
         description: "Post was successfully deleted !",

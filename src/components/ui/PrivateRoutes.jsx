@@ -8,8 +8,6 @@ const PrivateRoutes = ({ children }) => {
   const { user, isGettingUser } = useGetCurrentUser();
   const navigate = useNavigate();
 
-  console.log(user);
-
   useEffect(() => {
     if (!user && !isGettingUser) navigate("sign-in");
   }, [navigate, isGettingUser, user]);

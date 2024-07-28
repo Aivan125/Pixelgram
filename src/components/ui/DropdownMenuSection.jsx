@@ -33,6 +33,7 @@ const DropdownMenuSection = ({
   onOpenDialog,
   postId,
   postDetailsSection = true,
+  savedPostId,
 }) => {
   const navigate = useNavigate();
   const { user } = useGetCurrentUser();
@@ -41,7 +42,7 @@ const DropdownMenuSection = ({
 
   const handleDeletePost = (e) => {
     e.stopPropagation(e);
-    deletePost(postId);
+    deletePost({ postId, savedPostId });
 
     onOpenDialog(false);
   };

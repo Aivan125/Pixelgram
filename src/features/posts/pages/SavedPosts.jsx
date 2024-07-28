@@ -12,6 +12,8 @@ const SavedPosts = () => {
 
   if (isGettingUser) return <SpinnerComponent />;
 
+  console.log(user.saves);
+
   if (user.saves.length === 0)
     return (
       <p className="grid h-screen place-items-center text-gray-400">
@@ -25,7 +27,7 @@ const SavedPosts = () => {
     >
       <div className="mt-4 flex flex-col items-center justify-center space-y-4 p-4">
         <div className="grid grid-cols-1 place-items-center gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {user.saves.map((savedPost, index) => (
+          {user?.saves?.map((savedPost, index) => (
             <div
               key={savedPost.$id}
               className="group relative flex h-full w-full max-w-96 items-center justify-center overflow-hidden rounded-lg shadow-lg sm:max-w-60"
