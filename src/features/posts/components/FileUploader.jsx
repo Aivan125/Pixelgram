@@ -44,7 +44,7 @@ const FileUploader = ({ fieldChange, mediaUrl }) => {
       ) : (
         <div className="mb-4 flex h-full max-h-[520px] w-full max-w-[520px] flex-col items-center justify-center overflow-hidden rounded-xl border-[1px] border-gray-600 bg-gray-900">
           <img
-            src="../../../../public/assets/icons/file-upload.svg"
+            src="/assets/icons/file-upload.svg"
             width={96}
             height={77}
             alt="file-upload"

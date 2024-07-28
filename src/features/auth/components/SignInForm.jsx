@@ -56,12 +56,12 @@ const SignInForm = () => {
     <div className="flex w-full flex-col items-center px-12 lg:mx-auto lg:w-1/2">
       <div className="flex flex-1 flex-col items-center justify-between">
         <img
-          src="../../../../public/assets/images/logo.svg"
+          src="/assets/images/Pixelgram.png"
           alt="logo"
-          width={300}
-          height={300}
+          width={150}
+          height={150}
         />
-        <h2 className="mt-12 text-center text-2xl font-bold tracking-wider sm:text-4xl xl:text-3xl 2xl:text-4xl">
+        <h2 className="mt-12 whitespace-nowrap text-center text-2xl font-bold tracking-wider sm:text-4xl xl:text-3xl 2xl:text-4xl">
           Log in to your account
         </h2>
         <h3 className="mb-8 mt-2 text-center font-semibold text-gray-500">

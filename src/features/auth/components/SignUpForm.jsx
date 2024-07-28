@@ -51,18 +51,19 @@ const SignUpForm = () => {
   if (isCreatingUser) return <SpinnerFullPage />;
 
   return (
-    <div className="flex w-full flex-col items-center px-12 lg:mx-auto lg:w-1/2">
+    <div className="flex w-full flex-col items-center px-8 lg:mx-auto lg:w-1/2">
       <div className="flex flex-1 flex-col items-center justify-between">
         <img
-          src="../../../../public/assets/images/logo.svg"
+          src="/assets/images/Pixelgram.png"
           alt="logo"
-          width={300}
-          height={300}
+          width={150}
+          height={150}
+          className="mt-2"
         />
-        <h2 className="mt-12 text-center text-2xl font-bold tracking-wider sm:text-4xl xl:text-3xl 2xl:text-4xl">
+        <h2 className="mt-2 text-center text-2xl font-bold tracking-wider sm:text-3xl">
           Create a new account
         </h2>
-        <h3 className="mb-8 mt-2 text-center font-semibold text-gray-500">
+        <h3 className="mb-4 whitespace-nowrap text-center font-semibold text-gray-500">
           To use Snapgram please enter your account credentials
         </h3>
       </div>
